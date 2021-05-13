@@ -10,6 +10,7 @@ public class Main {
       //생성자
       Item item = new Item();
       Order order = new Order();
+      LookupStatistic lookupStatistic = new LookupStatistic();
       
       Scanner scan = new Scanner(System.in);
       
@@ -63,14 +64,20 @@ public class Main {
             	   sprice = scan.next();
             	   
             	   order.input(ordername, smenu, ssize, sprice);
+            	   break;
                } else if(order_choose == 2) {
             	   System.out.println("이름을 입력해주세요.");
             	   ordername = scan.next();
             	   
             	   order.output(ordername);
+            	   break;
                } else {
             	   break;
                }
+            case 3:
+            	System.out.println("이름을 입력해주세요.");
+            	String userName = scan.next();
+            	lookupStatistic.get(userName);
          }      
       }
    }
